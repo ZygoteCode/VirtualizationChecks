@@ -21,6 +21,16 @@ public class Program
     {
         Console.Title = "Virtualization Checks | Made by https://github.com/GabryB03/";
         Console.ForegroundColor = ConsoleColor.White;
+
+        if (Assembly.GetCallingAssembly() != Assembly.GetExecutingAssembly())
+        {
+            NotPassed("Entry Point Check", "The assembly that is calling the entry point method is not the currently executing assembly");
+        }
+        else
+        {
+            Passed("Entry Point Check", "The assembly that is calling the entry point method is the currently executing assembly");
+        }
+
         DriversCheck();
         UsernameCheck();
         ComputerNameCheck();
