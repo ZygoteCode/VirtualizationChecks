@@ -19,7 +19,7 @@ public class Program
 
     public static void Main()
     {
-        Console.Title = "Virtualization Checks | Made by https://github.com/GabryB03/";
+        Console.Title = "Virtualization Checks | Made by https://github.com/ZygoteCode/";
         Console.ForegroundColor = ConsoleColor.White;
 
         if (Assembly.GetCallingAssembly() != Assembly.GetExecutingAssembly())
